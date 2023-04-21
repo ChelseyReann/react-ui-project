@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import './App.css'
 
 const HamburgerMenu = () => {
@@ -21,6 +21,7 @@ const HamburgerMenu = () => {
   const handleBookClick = (book) => {
     // Update selected book state with the correct image URL
     setSelectedBook(book);
+    setIsMenuOpen(false);
   };
 
   const handleMenuToggle = () => {
@@ -28,7 +29,7 @@ const HamburgerMenu = () => {
   };
 
   return (
-    <div>
+    <div className="hamburger-menu-container">
       {/* Hamburger menu */}
       <div className="menu-icon" onClick={handleMenuToggle}>
         ☰
@@ -40,8 +41,10 @@ const HamburgerMenu = () => {
             {books.map((book, index) => (
               <p key={index} className="book-title" onClick={() => handleBookClick(book)}>
                 {book.title}
-              </p>))}
-          </div>)}
+              </p>
+              ))}
+          </div>
+          )}
       </div>
       {/* Render selected book information */}
       {selectedBook && (
