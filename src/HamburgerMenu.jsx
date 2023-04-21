@@ -31,6 +31,7 @@ const HamburgerMenu = () => {
   return (
     <div className="hamburger-menu-container">
       {/* Hamburger menu */}
+      <div className="hamburger-book-container">
       <div className="menu-icon" onClick={handleMenuToggle}>
         ☰
       </div>
@@ -52,10 +53,11 @@ const HamburgerMenu = () => {
           <img src={selectedBook.book_image} alt={selectedBook.title} />
           <h3>{selectedBook.title}</h3>
           <p>Author: {selectedBook.author}</p>
-          <p>Description: {selectedBook.description}</p>
+          <p className="book-description">Description: {selectedBook.description}</p>
           <p>Rank in Best Seller List: {selectedBook.rank}</p>
         </div>
       )}
+      </div>
     </div>
   );
 };

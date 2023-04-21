@@ -1,27 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
+body {
+  background-color: #F5E9FA
+}
+
 .header {
   text-align: center;
   font-family: "Quicksand", sans-serif;
+  text-decoration: underline;
 }
 
-.hamburger-menu-container {
+.hamburger-book-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: baseline;
+  align-content: baseline;
+  justify-items: center;
+  text-align: center;
 }
 
 .menu-icon{
   font-size: 3rem;
-}
-
-.hamburger-menu {
-  grid-column-start: 1 span 1;
+  margin-left: 1.5rem;
 }
 
 .selected-book {
-  grid-column-start: 3 span 1;
-
+  margin-left: 15%;
+  width: 63%;
 }
 
 p, h3, h4 {
@@ -29,5 +34,5 @@ p, h3, h4 {
 }
 
 h4 {
-  text-align: center
+  text-align: center;
 }
