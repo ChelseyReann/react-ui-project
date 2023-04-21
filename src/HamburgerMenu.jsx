@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import './App.css'
 
-const HamburgerMenu = () => {
+function HamburgerMenu () {
   const [books, setBooks] = useState([]);
   const [selectedBook, setSelectedBook] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track whether menu is open or closed
@@ -25,7 +25,8 @@ const HamburgerMenu = () => {
   };
 
   const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle menu open/closed state
+    // Toggle menu open/closed state
+    setIsMenuOpen(!isMenuOpen); 
   };
 
   return (
@@ -36,9 +37,9 @@ const HamburgerMenu = () => {
         ☰
       </div>
       <div className={`hamburger-menu ${isMenuOpen ? "open" : ""}`}>
-        {isMenuOpen && ( // Render book titles only when menu is open
+        {isMenuOpen && ( // Display book titles only when menu is open
           <div className="book-container">
-            {/* Render book titles */}
+            {/* Display book titles */}
             {books.map((book, index) => (
               <p key={index} className="book-title" onClick={() => handleBookClick(book)}>
                 {book.title}
@@ -47,7 +48,7 @@ const HamburgerMenu = () => {
           </div>
           )}
       </div>
-      {/* Render selected book information */}
+      {/* Display selected book information */}
       {selectedBook && (
         <div className="selected-book">
           <img src={selectedBook.book_image} alt={selectedBook.title} />
