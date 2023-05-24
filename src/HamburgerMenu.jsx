@@ -4,7 +4,8 @@ import './App.css'
 function HamburgerMenu () {
   const [books, setBooks] = useState([]);
   const [selectedBook, setSelectedBook] = useState(null);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track whether menu is open or closed
+  // State to track whether menu is open or closed
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
   useEffect(() => {
     // Fetch data from the API
