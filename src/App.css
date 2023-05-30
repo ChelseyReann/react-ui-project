@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
+@font-face {
+  font-family: "NYT Font";
+  src: url(./assets/Chomsky-8MOa2.otf)
+}
+
 body {
   background-color: #F5E9FA
 }
 
 .header {
   text-align: center;
-  font-family: "Quicksand", sans-serif;
-  text-decoration: underline;
+  font-family: "NYT Font", sans-serif;
+  font-size: 3.5rem;;
+  /* text-decoration: underline; */
 }
 
 .hamburger-book-container {
@@ -27,6 +33,7 @@ body {
 .selected-book {
   margin-left: 15%;
   width: 63%;
+  margin-top: 2rem;
 }
 
 p, h3, h4 {
@@ -35,4 +42,35 @@ p, h3, h4 {
 
 h4 {
   text-align: center;
+}
+
+@media screen and (max-width: 576px){
+  .bookimg {
+    width: 50%;
+    height: 50%
+  }
+
+  .header {
+    font-size: 2.25rem;
+  }
+
+  .hamburger-menu-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hamburger-book-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .selected-book {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .menu-icon {
+    margin-left: .5rem;
+  }
 }

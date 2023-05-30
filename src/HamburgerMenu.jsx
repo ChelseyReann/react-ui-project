@@ -52,7 +52,7 @@ function HamburgerMenu () {
       {/* Display selected book information */}
       {selectedBook && (
         <div className="selected-book">
-          <img src={selectedBook.book_image} alt={selectedBook.title} />
+          <img className="bookimg" src={selectedBook.book_image} alt={selectedBook.title} />
           <h3>{selectedBook.title}</h3>
           <p>Author: {selectedBook.author}</p>
           <p className="book-description">Description: {selectedBook.description}</p>
